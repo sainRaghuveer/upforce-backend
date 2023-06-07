@@ -32,7 +32,7 @@ exports.getUser = async (req, res) => {
             { email: { $regex: searchTerm, $options: "i" } }
         ]}).skip((page - 1) * 5).limit(5);
         const totalData = await userModel.find();
-        const totalPage = ((totalData.length)/5)
+        const totalPage = Math.ceil((totalData.length)/5)
         res.status(200).send({ "msg": "user data", "data": data, "Pages": totalPage});
     } catch (error) {
         console.log(error.message);
