@@ -29,7 +29,7 @@ app.use("/api", userRouter);
 
 
 //csv download Routes
-app.use("/api", exportCSVRouter , cors());
+app.use("/api", exportCSVRouter);
 
 
 //Server configuration
