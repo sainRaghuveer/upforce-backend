@@ -15,11 +15,7 @@ app.use(express.json());
 
 
 //to handle cross origin requests
-app.use(cors({
-    origin: 'https://upforce-assignment-by-raghuveersain.vercel.app',
-    methods: 'GET, POST, PATCH, DELETE',
-    allowedHeaders: 'Content-Type, Authorization'
-  }));
+app.use(cors());
 
 
 //default route
