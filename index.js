@@ -15,7 +15,11 @@ app.use(express.json());
 
 
 //to handle cross origin requests
-app.use(cors());
+app.use(cors({
+    origin: 'http://localhost:3000',
+    methods: 'GET, POST, PATCH, DELETE',
+    allowedHeaders: 'Content-Type, Authorization'
+  }));
 
 
 //default route
